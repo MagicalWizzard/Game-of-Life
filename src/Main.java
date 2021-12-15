@@ -6,7 +6,7 @@ public class Main {
 		int board1[][] = new int[20][20];
 		
 		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board.length; j++) {
+			for(int j = 0; j < board[0].length; j++) {
 				//board[i][j] = 0;
 			}
 		}
@@ -34,14 +34,14 @@ public class Main {
 		}*/
 		//'clean board'
 		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board.length; j++) {
+			for(int j = 0; j < board[0].length; j++) {
 				System.out.print(' ');
 			}
 			System.out.print('\n');
 		}
 
 		for(int i = 1; i < board.length-1; i++) {
-			for(int j = 1; j < board.length-1; j++) {
+			for(int j = 1; j < board[0].length-1; j++) {
 				if(board[i-1][j-1] == 1) {count++;}//0
 				if(board[i-1][j] == 1) {count++;} //1
 				if(board[i-1][j+1] == 1) {count++;} // 2
@@ -56,7 +56,7 @@ public class Main {
 			}
 		}
 		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board.length; j++) {
+			for(int j = 0; j < board[0].length; j++) {
 				//survives
 				if((board[i][j] == 1 && board1[i][j] == 2) || (board[i][j] == 1 && board1[i][j] == 3)) {
 					board[i][j] = 1;
@@ -87,11 +87,11 @@ public class Main {
 		
 		//draw board
 		for(int i = 0; i < board.length; i++) {
-			for(int j = 0; j < board.length; j++) {
+			for(int j = 0; j < board[0].length; j++) {
 				System.out.print(board1[i][j]);
 			}
 			System.out.print(' ');
-			for(int j = 0; j < board.length; j++) {
+			for(int j = 0; j < board[0].length; j++) {
 				
 					System.out.print(board[i][j]);
 				
