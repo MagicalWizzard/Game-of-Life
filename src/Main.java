@@ -1,7 +1,7 @@
 
 public class Main {
 	public static void main(String []args) {
-		//pole a výplň
+		//boards
 		int board[][] = new int[20][20]; // board of the pixels
 		int board1[][] = new int[20][20]; // second board, but for the numbers that the pixels create so that the algorythm can apply GOF rules
 		
